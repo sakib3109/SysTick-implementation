@@ -8,10 +8,11 @@ control systems.
 
 
 
-## SysTick implementation involves configuring its registers to use it as a 24-bit down-counter for timing and delays in embedded systems, particularly on ARM Cortex-M 
+SysTick implementation involves configuring its registers to use it as a 24-bit down-counter for timing and delays in embedded systems, particularly on ARM Cortex-M 
 microcontrollers. Key steps include setting the reload value, enabling the counter and the interrupt, and handling the interrupt handler to perform time-based actions, 
 such as a delay or incrementing a counter variable. For example, an implementation might set the reload value for a desired period, enable the SysTick interrupt, and have 
-a SysTick_Handler() function that runs when the counter reaches zero to update a timestamp or control an LED. ##
+a SysTick_Handler() function that runs when the counter reaches zero to update a timestamp or control an LED. 
+
 ## Core components and configuration : 
   * SysTick Control and Status Register (SysTick_CSR): This register controls the timer's operation. Key bits are:
       1. Enable bit: Enables or disables the counter.
