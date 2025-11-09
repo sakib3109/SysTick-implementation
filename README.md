@@ -6,7 +6,7 @@ as  STM32F4xx. However, the DUOS plans to expand its features to accept other AR
 must be tiny, provide a development venue for the controller designer and intelligent system developers, and help the affiliated technology enterprise deliver industry-grade 
 control systems. 
 
-Duos Directory Structure:
+## Duos Directory Structure:
 duos
 └── src
     ├── compile
@@ -70,7 +70,7 @@ duos
         ├── thread
         └── vfs
 
-SysTick implementation involves configuring its registers to use it as a 24-bit down-counter for timing and delays in embedded systems, particularly on ARM Cortex-M 
+## SysTick implementation involves configuring its registers to use it as a 24-bit down-counter for timing and delays in embedded systems, particularly on ARM Cortex-M 
 microcontrollers. Key steps include setting the reload value, enabling the counter and the interrupt, and handling the interrupt handler to perform time-based actions, 
 such as a delay or incrementing a counter variable. For example, an implementation might set the reload value for a desired period, enable the SysTick interrupt, and have 
 a SysTick_Handler() function that runs when the counter reaches zero to update a timestamp or control an LED. 
