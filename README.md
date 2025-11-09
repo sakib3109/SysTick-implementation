@@ -6,74 +6,12 @@ as  STM32F4xx. However, the DUOS plans to expand its features to accept other AR
 must be tiny, provide a development venue for the controller designer and intelligent system developers, and help the affiliated technology enterprise deliver industry-grade 
 control systems. 
 
-## Duos Directory Structure:
-duos
-└── src
-    ├── compile
-    │   ├── Makefile
-    │   ├── mapfiles
-    │   ├── object
-    │   └── target
-    ├── doc
-    │   └── Readme.txt
-    └── kern
-        ├── arch
-        │   ├── cm4
-        │   │   └── cm4.c
-        │   ├── include
-        │   │   └── cm4
-        │   │       └── cm4.h
-        │   └── stm32f446re
-        │       ├── dev
-        │       │   ├── clock.c
-        │       │   ├── gpio.c
-        │       │   ├── timer.c
-        │       │   └── usart.c
-        │       ├── include
-        │       │   ├── dev
-        │       │   │   ├── clock.h
-        │       │   │   ├── gpio.h
-        │       │   │   ├── timer.h
-        │       │   │   └── usart.h
-        │       │   └── sys
-        │       │       ├── stm32_peps.h
-        │       │       └── stm32_startup.h
-        │       ├── linker
-        │       │   └── linker.ld
-        │       └── sys
-        │           └── stm32_startup.c
-        ├── dev
-        ├── include
-        │   ├── kern
-        │   │   ├── errmsg.h
-        │   │   ├── errno.h
-        │   │   ├── syscall_def.h
-        │   │   ├── sys_init.h
-        │   │   └── unistd.h
-        │   ├── kfloat.h
-        │   ├── kmain.h
-        │   ├── kmath.h
-        │   ├── kstdio.h
-        │   ├── kstring.h
-        │   └── syscall.h
-        ├── kmain
-        │   └── kmain.c
-        ├── lib
-        │   ├── kfloat.c
-        │   ├── kmath.c
-        │   ├── kstdio.c
-        │   ├── kstring.c
-        │   └── sys_init.c
-        ├── proc
-        ├── syscall
-        │   └── syscalls.c
-        ├── thread
-        └── vfs
+
 
 ## SysTick implementation involves configuring its registers to use it as a 24-bit down-counter for timing and delays in embedded systems, particularly on ARM Cortex-M 
 microcontrollers. Key steps include setting the reload value, enabling the counter and the interrupt, and handling the interrupt handler to perform time-based actions, 
 such as a delay or incrementing a counter variable. For example, an implementation might set the reload value for a desired period, enable the SysTick interrupt, and have 
-a SysTick_Handler() function that runs when the counter reaches zero to update a timestamp or control an LED. 
+a SysTick_Handler() function that runs when the counter reaches zero to update a timestamp or control an LED. ##
 ## Core components and configuration : 
   * SysTick Control and Status Register (SysTick_CSR): This register controls the timer's operation. Key bits are:
       1. Enable bit: Enables or disables the counter.
